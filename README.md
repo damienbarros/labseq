@@ -26,4 +26,6 @@ http://localhost:8080/q/swagger-ui
 <img width="1450" height="752" alt="image" src="https://github.com/user-attachments/assets/d869d252-3a3e-471c-b130-2a40b35a2197" />
 
 
+update: 
+GUI Added -> http://localhost:8080/index.html
 
