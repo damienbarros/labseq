@@ -28,5 +28,5 @@ http://localhost:8080/q/swagger-ui
 ------------------------
 
 update: 
-GUI Added -> http://localhost:8080/index.html
+HTML + JavaScript interface at -> http://localhost:8080/index.html
 
