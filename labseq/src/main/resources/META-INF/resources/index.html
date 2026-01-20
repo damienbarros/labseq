@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Labseq Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input, button {
+            font-size: 16px;
+            padding: 6px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h2>Labseq Calculator</h2>
+
+<label for="n">Enter n:</label>
+<input type="number" id="n" min="0" />
+<button onclick="calculate()">Calculate</button>
+
+<div id="result"></div>
+
+<script>
+    async function calculate() {
+        const n = document.getElementById("n").value;
+        const resultDiv = document.getElementById("result");
+
+        if (n === "" || n < 0) {
+            resultDiv.innerText = "Please enter a non-negative number.";
+            return;
+        }
+
+        resultDiv.innerText = "Calculating...";
+
+        try {
+            const response = await fetch(`/labseq/${n}`);
+            if (!response.ok) {
+                throw new Error("Request failed");
+            }
+            const data = await response.text();
+            resultDiv.innerText = `l(${n}) = ${data}`;
+        } catch (err) {
+            resultDiv.innerText = "Error calling the service.";
+        }
+    }
+</script>
+</body>
+</html>
