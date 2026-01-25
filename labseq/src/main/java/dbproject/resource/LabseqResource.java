@@ -1,6 +1,6 @@
 package dbproject.resource;
 
-import dbproject.service.LabsecService;
+import dbproject.service.LabseqService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -9,10 +9,10 @@ import jakarta.ws.rs.PathParam;
 import java.math.BigInteger;
 
 @Path("/labseq")
-public class LabsecResource {
+public class LabseqResource {
 
     @Inject
-    LabsecService service;
+    LabseqService service;
 
     @GET
     @Path("/{n}")

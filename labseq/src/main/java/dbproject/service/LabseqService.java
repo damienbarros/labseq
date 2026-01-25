@@ -7,11 +7,11 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @ApplicationScoped
-public class LabsecService {
+public class LabseqService {
 
     private final Map<Integer, BigInteger> cache = new ConcurrentHashMap<>();
 
-    public LabsecService() {
+    public LabseqService() {
         cache.put(0, BigInteger.ZERO);
         cache.put(1, BigInteger.ONE);
         cache.put(2, BigInteger.ZERO);
